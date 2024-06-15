@@ -30,7 +30,7 @@ public class WebSecurityConfiguration {
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/**")
+                .requestMatchers("/api/**", "/api/admin/**", "/api/admin/category")
                 .authenticated()
                 .and()
                 .sessionManagement()
@@ -38,7 +38,6 @@ public class WebSecurityConfiguration {
                 .and()
                 .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
-
     }
 
     @Bean
