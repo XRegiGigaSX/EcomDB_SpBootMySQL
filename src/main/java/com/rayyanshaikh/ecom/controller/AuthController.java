@@ -41,6 +41,7 @@ public class AuthController {
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String HEADER_STRING = "Authorization";
 
+    @Autowired
     private final AuthService authService;
 
 
